@@ -25,7 +25,7 @@ public class ChatClientUI extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         Color backgroundColor = new Color(60,60,60);
-        Color buttonColor = new Color(250,75,75);
+        Color buttonColor = new Color(75,75,75);
         Color textColor = new Color(250,250,250);
         Color messageColor = new Color(75,75,75);
         Font textFont = new Font("Roboto Mono", Font.PLAIN, 14);
