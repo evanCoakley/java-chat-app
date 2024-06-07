@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="450a3469-fffa-4158-936d-a66be7e8859d" name="Changes" comment="Worked out some styling. Logging is working well." />
+    <list default="true" id="450a3469-fffa-4158-936d-a66be7e8859d" name="Changes" comment="Add line wrap to chat messageArea">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 5
@@ -102,7 +108,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717742272161</updated>
-      <workItem from="1717742273439" duration="3061000" />
+      <workItem from="1717742273439" duration="4165000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit after moving project to Maven build">
       <option name="closed" value="true" />
@@ -120,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717745154339</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add line wrap to chat messageArea">
+      <option name="closed" value="true" />
+      <created>1717745712494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717745712494</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit after moving project to Maven build" />
     <MESSAGE value="Worked out some styling. Logging is working well." />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked out some styling. Logging is working well." />
+    <MESSAGE value="Add line wrap to chat messageArea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add line wrap to chat messageArea" />
   </component>
 </project>
