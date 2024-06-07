@@ -1,5 +1,7 @@
 package org.coakley.ui;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.coakley.client.ChatClient;
 
 import javax.swing.*;
@@ -11,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ChatClientUI extends JFrame {
+    private static final Logger logger = LogManager.getLogger(ChatClientUI.class);
     private JTextArea messageArea;
     private JTextField textField;
     private JButton exitButton;
@@ -18,12 +21,13 @@ public class ChatClientUI extends JFrame {
 
     public ChatClientUI(){
         super("Chat App");
-        setSize(400, 500);
+        setSize(500, 700);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         Color backgroundColor = new Color(60,60,60);
         Color buttonColor = new Color(250,75,75);
         Color textColor = new Color(250,250,250);
+        Color messageColor = new Color(75,75,75);
         Font textFont = new Font("Roboto Mono", Font.PLAIN, 14);
         Font buttonFont = new Font("Roboto Mono", Font.BOLD,12);
 
@@ -32,6 +36,8 @@ public class ChatClientUI extends JFrame {
         messageArea.setForeground(textColor);
         messageArea.setBackground(backgroundColor);
         messageArea.setFont(textFont);
+        messageArea.setLineWrap(true);
+        messageArea.setWrapStyleWord(true);
         JScrollPane scrollPane = new JScrollPane(messageArea);
         add(scrollPane, BorderLayout.CENTER);
 
@@ -40,8 +46,9 @@ public class ChatClientUI extends JFrame {
 
         textField = new JTextField();
         textField.setFont(textFont);
-        textField.setForeground(textColor);
-        textField.setBackground(backgroundColor);
+        textField.setForeground(Color.BLACK);
+        textField.setBackground(Color.WHITE);
+
         textField.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -75,14 +82,14 @@ public class ChatClientUI extends JFrame {
             this.client = new ChatClient("127.0.0.1",2000, this::onMessageReceived);
             client.startClient();
         } catch (IOException e){
-            e.printStackTrace();
+            logger.error("Error Connecting the server", e);
             JOptionPane.showMessageDialog(this,"Error connecting the server", "Connection Error", JOptionPane.ERROR_MESSAGE);
             System.exit(1);
         }
 
     }
     private void onMessageReceived(String message){
-        SwingUtilities.invokeLater(() -> messageArea.append(message + "\n"));
+        SwingUtilities.invokeLater(() -> messageArea.append(message + "\n\n"));
     }
 
     public static void main(String[] args) {

@@ -5,9 +5,9 @@ import java.net.*;
 import java.util.function.Consumer;
 
 public class ChatClient {
-    private Socket socket = null;
-    private BufferedReader in = null;
-    private PrintWriter out = null;
+    private Socket socket;
+    private BufferedReader in;
+    private PrintWriter out;
     private Consumer<String> onMessageReceived;
 
     public ChatClient(String serverAddress, int serverPort, Consumer<String> onMessageReceived) throws IOException {
